@@ -1,30 +1,191 @@
+/* Base Styles: Set basic styles for html and body elements */
+html, body {
+    font-family: 'Montserrat Alternates', sans-serif; /* Set font for overall application */
+    color: #FFFFFF; /* Set text color to white */
+    width: 100%; /* Set full width for html and body */
+    max-width: 100%; /* Ensure max width doesn't exceed viewport */
+    height: 100%; /* Full height for html and body */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    background: linear-gradient(135deg, rgba(154,57,163,1) 0%, rgba(65,103,168,1) 100%); /* Gradient background */
+}
+
 body {
-    padding-top: 50px;
-    background-color: #f7f8fa;
+    padding-top: 50px; /* Add space at the top of the page */
+}
+
+/* Container for the search box and results */
+.container {
+    position: relative;
+    margin: 0 auto; /* Center container horizontally */
+    padding: 0; /* No padding */
+    width: 100%; /* Full width */
+    max-width: 840px; /* Limit max width */
+    text-align: center; /* Center text inside container */
 }
 
 .search-container {
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.search-input {
-    padding: 15px;
-    font-size: 18px;
+    margin: 0 auto; /* Center search container horizontally */
+    max-width: 600px; /* Set max width for the search area */
 }
 
 .results-container {
-    margin-top: 30px;
+    margin-top: 30px; /* Space above the results container */
 }
 
-.country-result {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+/* Fancy Search Box: Styles for the search input and its border */
+.search-box {
+    position: relative; /* Relative to hold the icons and border */
+    width: 100%; /* Full width */
+    max-width: 360px; /* Limit the max width */
+    height: 60px; /* Set height */
+    border-radius: 120px; /* Rounded shape for the search box */
+    margin: 0 auto; /* Center the search box horizontally */
 }
 
+.search-icon, .go-icon {
+    position: absolute; /* Positioned relative to search box */
+    top: 0; /* Align to the top of the box */
+    height: 60px; /* Full height of the search box */
+    width: 86px; /* Width for the icons container */
+    line-height: 61px; /* Vertically center icons */
+    text-align: center; /* Center text inside the icon container */
+}
+
+.search-icon {
+    left: 0; /* Align search icon to the left */
+    pointer-events: none; /* Prevent interaction */
+    font-size: 1.22em; /* Set font size for the icon */
+    transform: rotate(-45deg); /* Initially rotate search icon */
+    transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* Smooth rotation transition */
+}
+
+.si-rotate {
+    transform: rotate(0deg); /* Rotate icon to default position on focus */
+}
+
+.go-icon {
+    right: 0; /* Align to the right */
+    font-size: 1.38em; /* Set size for the arrow icon */
+    opacity: 0; /* Initially hidden */
+    transform: rotate(45deg); /* Initial rotation */
+    transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* Smooth transition for visibility */
+}
+
+.go-in {
+    opacity: 1; /* Make go-icon visible when active */
+    transform: rotate(0); /* Rotate to default position */
+}
+
+/* Search box SVG border animation */
+.search-border {
+    display: block;
+    width: 100%; /* Full width */
+    max-width: 360px; /* Limit max width */
+    height: 60px; /* Height matches the search box */
+}
+
+.border {
+    fill: none; /* Transparent background */
+    stroke: #FFFFFF; /* White border line */
+    stroke-width: 5; /* Set border thickness */
+    stroke-miterlimit: 10; /* Define corner shape */
+    stroke-dasharray: 740; /* Define dashed line pattern */
+    stroke-dashoffset: 0; /* Initial offset */
+    transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990); /* Animation for border movement */
+}
+
+.border-searching .border {
+    stroke-dashoffset: 459; /* Move dashed border when searching */
+    transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000); /* Smooth animation for border */
+}
+
+/* Styles for the search input field */
+#searchInput {
+    font-family: 'Montserrat Alternates', sans-serif; /* Font for input field */
+    position: absolute; /* Absolute positioning within search box */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the search box */
+    height: 100%; /* Full height of the search box */
+    border-radius: 120px; /* Rounded input field */
+    border: none; /* No border */
+    background: rgba(255, 255, 255, 0); /* Transparent background */
+    padding: 0 68px; /* Padding on both sides */
+    color: #FFFFFF; /* White text color */
+    font-size: 1.32em; /* Set font size */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Placeholder styles for the input box */
+#searchInput::-webkit-input-placeholder,
+#searchInput::-moz-placeholder,
+#searchInput:-ms-input-placeholder,
+#searchInput:-moz-placeholder {
+    color: #FFFFFF; /* White placeholder text */
+}
+
+#searchInput::-moz-selection,
+#searchInput::selection {
+    color: #FFFFFF; /* Highlighted text color */
+    background: rgba(0, 0, 0, 0.25); /* Highlight background color */
+}
+
+/* Loading indicator for when data is being fetched */
 .loading {
-    display: none;
+    display: none; /* Hidden by default */
+}
+
+/* Country card styles - more compact and visually appealing */
+.country-result {
+    position: relative; /* Position relative for layering flag and text */
+    margin-bottom: 15px; /* Space below each card */
+    overflow: hidden; /* Hide overflow to create neat borders */
+    width: 100%; /* Full available width */
+    max-width: 500px; /* Limit the width of the card */
+    height: 200px; /* Set height for a consistent appearance */
+    border-radius: 20px; /* Rounded corners for a sleek look */
+    margin: 0 auto 15px auto; /* Center card horizontally, add bottom margin */
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+/* Zoom effect on hover for country cards */
+.country-result:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+/* Make the flag image cover the entire card with transparency */
+.country-flag {
+    position: absolute; /* Cover entire card */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover entire card width */
+    height: 100%; /* Cover entire card height */
+    object-fit: cover; /* Maintain aspect ratio while covering */
+    opacity: 0.25; /* Transparency to let text stand out */
+}
+
+/* Styling for the country name overlaid on the card */
+.country-name {
+    position: relative; /* Position above flag */
+    z-index: 2; /* Ensure text appears above flag */
+    text-align: center; /* Center text within card */
+    font-size: 1.5em; /* Font size for country name */
+    font-weight: bold; /* Bold font for emphasis */
+    color: #ffffff; /* White text color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow to improve readability */
+    line-height: 200px; /* Vertically center text within card */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .country-result {
+        height: 150px; /* Adjust card height for smaller screens */
+    }
+
+    .country-name {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+        line-height: 150px; /* Adjust line height for smaller cards */
+    }
 }

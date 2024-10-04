@@ -2,9 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Search</title>
+
+  <!-- Link to custom CSS styles for page styling -->
+  <link href="/css/styles.css" rel="stylesheet"> <!-- Path updated -->
+
+  <!-- Link to Font Awesome for search and arrow icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+
+  <!-- Link to Bootstrap CSS for responsive design and basic styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-$END$
+<!-- Main section containing the search box and country search results -->
+<main>
+  <!-- Container for the entire search feature -->
+  <div class="container">
+
+    <!-- Fancy search box with input and submit button -->
+    <div class="search-box">
+      <!-- Icon indicating the search functionality (Font Awesome icon) -->
+      <div class="search-icon"><i class="fa fa-search search-icon"></i></div>
+
+      <!-- Search input form -->
+      <form action="" class="search-form">
+        <!-- Input field for entering search query -->
+        <input type="text" id="searchInput" placeholder="Search" autocomplete="off">
+      </form>
+
+      <!-- SVG for the border animation of the search box -->
+      <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 671 111" style="enable-background:new 0 0 671 111;" xml:space="preserve">
+          <path class="border" d="M335.5,108.5h-280c-29.3,0-53-23.7-53-53v0c0-29.3,23.7-53,53-53h280"/>
+        <path class="border" d="M335.5,108.5h280c29.3,0,53-23.7,53-53v0c0-29.3,23.7-53-53-53h-280"/>
+        </svg>
+
+      <!-- Icon for "go" or "submit" action when search input is provided (Font Awesome arrow icon) -->
+      <div class="go-icon"><i class="fa fa-arrow-right"></i></div>
+    </div>
+
+    <!-- Loading indicator to show while waiting for a response -->
+    <div class="loading mt-3">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span> <!-- Screen reader text for accessibility -->
+      </div>
+    </div>
+
+    <!-- Container for displaying the list of countries retrieved from the search -->
+    <div class="results-container" id="results"></div>
+
+  </div> <!-- End of container -->
+</main>
+
+<!-- jQuery library to enable JavaScript manipulations and animations -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Link to custom JavaScript file for handling the search and animations -->
+<script src="/js/scripts.js"></script> <!-- Path updated -->
+
+<!-- Bootstrap JavaScript for interactive UI components like buttons and forms -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
