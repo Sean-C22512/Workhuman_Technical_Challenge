@@ -1,9 +1,8 @@
 # Project: Country Search Application
 
-![Project Banner](static/img/banner.png)
+![Project Banner](src/main/resources/static/img/banner.png)
 
-
-Welcome to the **Country Search Application** repository! This web-based application allows users to search for countries using a sleek, modern user interface that dynamically displays search results. Built using Spring Boot for the backend and jQuery, HTML, and CSS for the frontend, this project is a perfect example of combining powerful backend capabilities with a dynamic, user-friendly frontend.
+Welcome to the *Workhuman Technical Challenge* repository! This web-based application allows users to search for countries using a sleek, modern user interface that dynamically displays search results. Built using Spring Boot for the backend and jQuery, HTML, and CSS for the frontend, this project is a perfect example of combining powerful backend capabilities with a dynamic, user-friendly frontend.
 
 ## Table of Contents
 
@@ -58,6 +57,7 @@ Country-Search-Application/
 │   │       │   ├── js/
 │   │       │   │   └── scripts.js
 │   │       │   └── images/
+│   │       │       └── banner.png
 │   │       └── templates/
 │   │           └── index.html
 ├── build.gradle
@@ -69,10 +69,13 @@ Country-Search-Application/
 Add some visual appeal! Below are a few screenshots showcasing the application in action:
 
 1. **Homepage with Search Box**:
-   ![Homepage](insert-screenshot-url-here)
+   ![Homepage](src/main/resources/static/img/homepage.png)
 
 2. **Country Search Results**:
-   ![Country Search](insert-screenshot-url-here)
+   ![Country Search](src/main/resources/static/img/search_results.png)
+
+3. **MySQL Database Overview**:
+   ![Database Screenshot](src/main/resources/static/img/database.png)
 
 ## Getting Started
 
