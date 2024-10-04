@@ -2,7 +2,6 @@
 
 ![Project Banner](src/main/resources/static/img/banner.png)
 
-
 Welcome to the *Workhuman Technical Challenge* repository! This web-based application allows users to search for countries using a sleek, modern user interface that dynamically displays search results. Built using Spring Boot for the backend and jQuery, HTML, and CSS for the frontend, this project is a perfect example of combining powerful backend capabilities with a dynamic, user-friendly frontend.
 
 ## Table of Contents
@@ -15,6 +14,7 @@ Welcome to the *Workhuman Technical Challenge* repository! This web-based applic
 6. [Getting Started](#getting-started)
 7. [API Endpoints](#api-endpoints)
 8. [Contributing](#contributing)
+9. [License](#license)
 
 ## Project Overview
 
@@ -57,6 +57,7 @@ Country-Search-Application/
 │   │       │   ├── js/
 │   │       │   │   └── scripts.js
 │   │       │   └── images/
+│   │       │       └── banner.png
 │   │       └── templates/
 │   │           └── index.html
 ├── build.gradle
@@ -72,6 +73,9 @@ Add some visual appeal! Below are a few screenshots showcasing the application i
 
 2. **Country Search Results**:
    ![Country Search](src/main/resources/static/img/search_results.png)
+
+3. **MySQL Database Overview**:
+   ![Database Screenshot](src/main/resources/static/img/database.png)
 
 ## Getting Started
 
@@ -123,6 +127,14 @@ Contributions are welcome! Feel free to submit a Pull Request or raise issues fo
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin feature-name`
 5. Submit a Pull Request
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- **FlagCDN** for providing country flag images.
 - **FontAwesome** for icons used in the search box UI.
 
 ---
