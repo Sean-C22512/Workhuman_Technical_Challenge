@@ -1,0 +1,30 @@
+body {
+    padding-top: 50px;
+    background-color: #f7f8fa;
+}
+
+.search-container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.search-input {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.results-container {
+    margin-top: 30px;
+}
+
+.country-result {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.loading {
+    display: none;
+}
