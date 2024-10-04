@@ -13,8 +13,7 @@ Welcome to the *Workhuman Technical Challenge* repository! This web-based applic
 5. [Screenshots](#screenshots)
 6. [Getting Started](#getting-started)
 7. [API Endpoints](#api-endpoints)
-8. [Contributing](#contributing)
-9. [License](#license)
+
 
 ## Project Overview
 
@@ -75,7 +74,8 @@ Add some visual appeal! Below are a few screenshots showcasing the application i
    ![Country Search](src/main/resources/static/img/search_results.png)
 
 3. **MySQL Database Overview**:
-   ![Database Screenshot](src/main/resources/static/img/database.png)
+   
+   ![Database Screenshot](src/main/resources/static/img/countrydb.png)
 
 ## Getting Started
 
@@ -117,20 +117,6 @@ To get started with the project, follow these steps:
 - **GET** `/countries` - Retrieve a list of all countries.
 - **GET** `/search?name={countryName}` - Search for countries by name.
 - **GET** `/db-check` - Check the status of the database connection.
-
-## Contributing
-
-Contributions are welcome! Feel free to submit a Pull Request or raise issues for any bugs or feature suggestions.
-
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature-name`
-5. Submit a Pull Request
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
