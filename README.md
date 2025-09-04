@@ -1,8 +1,7 @@
 # Project: Country Search Application
+Welcome to the *Workhuman Technical Challenge* repository! This web-based application allows users to search for countries using a sleek, modern user interface that dynamically displays search results. Built using Spring Boot for the backend and jQuery, HTML, and CSS for the frontend, this project is a perfect example of combining powerful backend capabilities with a dynamic, user-friendly frontend.
 
 ![Project Banner](src/main/resources/static/img/banner.png)
-
-Welcome to the *Workhuman Technical Challenge* repository! This web-based application allows users to search for countries using a sleek, modern user interface that dynamically displays search results. Built using Spring Boot for the backend and jQuery, HTML, and CSS for the frontend, this project is a perfect example of combining powerful backend capabilities with a dynamic, user-friendly frontend.
 
 ## Table of Contents
 
